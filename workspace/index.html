@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS 초보에요</h1>
+    <div class="alert-box" id="alert">알림창임
+        <button onclick="closeAlert('none')">딛힘</button>
+    </div>
+    <button onclick="openAlert('blocks')">버튼</button>
+
+    <button onclick="alert('block', '아이디를 입력하세요.')">버튼1</button>
+    <button onclick="alert('block', '비밀번호를 입력하세요.')">버튼2</button>
+    
+    <script>
+        document.getElementById('hello').innerHTML = '안녕';
+        document.getElementById('hi').innerHTML = 'JS고수에요';
+        document.getElementById('hello').style.fontSize = '16px';
+
+        function closeAlert() {
+            document.getElementById('alert').style.display = 'none';
+        }
+
+        function openAlert() {
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        function alert(state, msg) {
+            document.getElementById('alert').style.display = state;
+            document.getElementById('alert').innerHTML = msg;
+        }
+
+        function plus(params) {
+            2 + params;
+        }
+
+    </script>
+</body>
+</html>
